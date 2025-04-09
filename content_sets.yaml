@@ -1,0 +1,101 @@
+# This is a file defining which content sets are needed to update content in
+# this OS. Data provided here helps determine which images are vulnerable to
+# specific CVEs.
+#
+# The names of the repos can be found in the repo to CPE mapping file:
+# https://www.redhat.com/security/data/metrics/repository-to-cpe.json
+
+repo_mapping:
+  rhel-8.6-baseos:
+    name: rhel-8-for-$ARCH-baseos-e4s-rpms__8_DOT_6
+    baseurl: http://rhsm-pulp.corp.redhat.com/content/e4s/rhel8/8.6/$ARCH/baseos/os/
+  rhel-8.6-appstream:
+    name: rhel-8-for-$ARCH-appstream-e4s-rpms__8_DOT_6
+    baseurl: http://rhsm-pulp.corp.redhat.com/content/e4s/rhel8/8.6/$ARCH/appstream/os/
+  rhel-8.6-fast-datapath:
+    name: fast-datapath-for-rhel-8-$ARCH-rpms
+    baseurl: http://rhsm-pulp.corp.redhat.com/content/dist/layered/rhel8/$ARCH/fast-datapath/os/
+  rhel-8.6-server-ose-4.13:
+    name: rhocp-4.13-for-rhel-8-$ARCH-rpms
+    baseurl: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/4.13/stream/el8/latest/$ARCH/os
+  rhel-8.6-server-ose-4.12:
+    name: rhocp-4.12-for-rhel-8-$ARCH-rpms
+    baseurl: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/4.12/stream/el8/latest/$ARCH/os
+  rhel-8.6-server-ose-4.11:
+    name: rhocp-4.11-for-rhel-8-$ARCH-rpms
+    baseurl: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/4.11/stream/el8/latest/$ARCH/os
+  rhel-9.2-baseos:
+    name: rhel-9-for-$ARCH-baseos-eus-rpms__9_DOT_2
+    baseurl: https://rhsm-pulp.corp.redhat.com/content/eus/rhel9/9.2/$ARCH/baseos/os/
+  rhel-9.2-appstream:
+    name: rhel-9-for-x86_64-appstream-eus-rpms__9_DOT_2
+    baseurl: https://rhsm-pulp.corp.redhat.com/content/eus/rhel9/9.2/$ARCH/appstream/os
+  rhel-9.2-server-ose-4.13:
+    name: rhocp-4.13-for-rhel-9-$ARCH-rpms
+    baseurl: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/4.13/stream/el9/latest/$ARCH/os
+  rhel-9.2-server-ose-4.14:
+    name: rhocp-4.14-for-rhel-9-$ARCH-rpms
+    baseurl: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/4.14/stream/el9/latest/$ARCH/os
+  rhel-9.2-server-ose-4.15:
+    name: rhocp-4.15-for-rhel-9-$ARCH-rpms
+    baseurl: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/4.15/stream/el9/latest/$ARCH/os
+  rhel-9.2-server-ose-4.16:
+    name: rhocp-4.16-for-rhel-9-$ARCH-rpms
+    baseurl: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/4.16/stream/el9/latest/$ARCH/os
+  rhel-9.4-baseos:
+    name: rhel-9-for-$ARCH-baseos-eus-rpms__9_DOT_4
+    baseurl: https://rhsm-pulp.corp.redhat.com/content/eus/rhel9/9.4/$ARCH/baseos/os/
+  rhel-9.4-appstream:
+    name: rhel-9-for-$ARCH-appstream-eus-rpms__9_DOT_4
+    baseurl: https://rhsm-pulp.corp.redhat.com/content/eus/rhel9/9.4/$ARCH/appstream/os/
+  rhel-9.4-server-ose-4.16:
+    name: rhocp-4.16-for-rhel-9-$ARCH-rpms
+    baseurl: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/4.16/stream/el9/latest/$ARCH/os
+  rhel-9.4-server-ose-4.17:
+    name: rhocp-4.17-for-rhel-9-$ARCH-rpms
+    baseurl: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/4.17/stream/el9/latest/$ARCH/os
+  rhel-9.4-server-ose-4.18:
+    name: rhocp-4.18-for-rhel-9-$ARCH-rpms
+    baseurl: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/4.18/stream/el9/latest/$ARCH/os
+  rhel-9.4-server-ose-4.19:
+    name: rhocp-4.19-for-rhel-9-$ARCH-rpms
+    baseurl: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/4.19/stream/el9/latest/$ARCH/os
+  rhel-9.6-server-ose-4.19:
+    name: rhocp-4.19-for-rhel-9-$ARCH-rpms
+    baseurl: https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/4.19/stream/el9/latest/$ARCH/os
+  rhel-9.4-nfv:
+    name: rhel-9-for-$ARCH-nfv-rpms
+    baseurl: https://rhsm-pulp.corp.redhat.com/content/e4s/rhel9/9.4/$ARCH/nfv/os/
+  rhel-9.4-fast-datapath:
+    name: fast-datapath-for-rhel-9-$ARCH-rpms
+    baseurl: http://rhsm-pulp.corp.redhat.com/content/dist/layered/rhel9/$ARCH/fast-datapath/os/
+  rhel-9.6-baseos:
+    name: rhel-9-for-$ARCH-baseos-eus-rpms__9_DOT_6
+    baseurl: https://rhsm-pulp.corp.redhat.com/content/eus/rhel9/9.6/$ARCH/baseos/os/
+  rhel-9.6-appstream:
+    name: rhel-9-for-$ARCH-appstream-eus-rpms__9_DOT_6
+    baseurl: https://rhsm-pulp.corp.redhat.com/content/eus/rhel9/9.6/$ARCH/appstream/os/
+  rhel-9.6-nfv:
+    name: rhel-9-for-$ARCH-nfv-rpms
+    baseurl: https://rhsm-pulp.corp.redhat.com/content/e4s/rhel9/9.6/$ARCH/nfv/os/
+  rhel-9.6-fast-datapath:
+    name: fast-datapath-for-rhel-9-$ARCH-rpms
+    baseurl: http://rhsm-pulp.corp.redhat.com/content/dist/layered/rhel9/$ARCH/fast-datapath/os/
+  rhel-9.6-high-availability:
+    name: rhel-9-for-$ARCH-highavailability-eus-rpms__9_DOT_6
+    baseurl: https://rhsm-pulp.corp.redhat.com/content/eus/rhel9/9.6/$ARCH/highavailability/os
+  rhel-10-baseos:
+    name: rhel-10-for-$ARCH-baseos-eus-rpms__10_DOT_0
+    baseurl: https://rhsm-pulp.corp.redhat.com/content/eus/rhel10/10.0/$ARCH/baseos/os/
+  rhel-10.0-appstream:
+    name: rhel-10-for-$ARCH-appstream-eus-rpms__10_DOT_0
+    baseurl: https://rhsm-pulp.corp.redhat.com/content/eus/rhel10/10.0/$ARCH/appstream/os/
+  rhel-10.0-nfv:
+    name: rhel-10-for-$ARCH-nfv-rpms
+    baseurl: https://rhsm-pulp.corp.redhat.com/content/e4s/rhel10/10.0/$ARCH/nfv/os/
+  rhel-10.0-fast-datapath:
+    name: fast-datapath-for-rhel-10-$ARCH-rpms
+    baseurl: http://rhsm-pulp.corp.redhat.com/content/dist/layered/rhel10/$ARCH/fast-datapath/os/
+  rhel-10.0-high-availability:
+    name: rhel-10-for-$ARCH-highavailability-eus-rpms__10_DOT_0
+    baseurl: https://rhsm-pulp.corp.redhat.com/content/eus/rhel10/10.0/$ARCH/highavailability/os
