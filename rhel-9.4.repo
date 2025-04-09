@@ -1,0 +1,64 @@
+# WARNING: Read docs/repos.md for instructions on how to update this file
+# WARNING: If you change the baseurls in this file, then you need to update the
+# corresponding `content_sets-rhel-VERSION.yaml` file.
+
+[rhel-9.4-baseos]
+name=rhel-9.4-baseos
+baseurl=https://rhsm-pulp.corp.redhat.com/content/eus/rhel9/9.4/$basearch/baseos/os/
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+
+[rhel-9.4-appstream]
+name=rhel-9.4-appstream
+baseurl=https://rhsm-pulp.corp.redhat.com/content/eus/rhel9/9.4/$basearch/appstream/os/
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+
+[rhel-9.4-nfv]
+name=rhel-9.4-nfv
+baseurl=https://rhsm-pulp.corp.redhat.com/content/e4s/rhel9/9.4/$basearch/nfv/os/
+# this one isn't necessary for the base compose and isn't available on all arches
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+
+[rhel-9.4-fast-datapath]
+name=rhel-9.4-fast-datapath
+baseurl=https://rhsm-pulp.corp.redhat.com/content/dist/layered/rhel9/$basearch/fast-datapath/os/
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+
+[rhel-9.4-server-ose-4.16]
+name=rhel-9.4-server-ose-4.16
+baseurl=https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/4.16/stream/el9/latest/$basearch/os
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+
+[rhel-9.4-server-ose-4.17]
+name=rhel-9.4-server-ose-4.17
+baseurl=https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/4.17/stream/el9/latest/$basearch/os
+enabled=1
+# ART RPMs are not signed before GA
+gpgcheck=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+
+[rhel-9.4-server-ose-4.18]
+name=rhel-9.4-server-ose-4.18
+baseurl=https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/4.18/stream/el9/latest/$basearch/os
+enabled=1
+# ART RPMs are not signed before GA
+gpgcheck=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+
+# Continue to provide 9.4 named repo for 4.19 until 9.6 is stablized
+[rhel-9.4-server-ose-4.19]
+name=rhel-9.4-server-ose-4.19
+baseurl=https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/4.19/stream/el9/latest/$basearch/os
+enabled=1
+# ART RPMs are not signed before GA
+gpgcheck=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
