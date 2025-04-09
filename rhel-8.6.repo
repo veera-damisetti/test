@@ -1,0 +1,47 @@
+# WARNING: Read docs/repos.md for instructions on how to update this file
+# WARNING: If you change the baseurls in this file, then you need to update the
+# corresponding `content_sets-rhel-VERSION.yaml` file.
+
+#RHCOS content is pinned to the 8.6 E4S
+[rhel-8.6-baseos]
+name=rhel-8.6-baseos
+baseurl=https://rhsm-pulp.corp.redhat.com/content/e4s/rhel8/8.6/$basearch/baseos/os/
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+
+[rhel-8.6-appstream]
+name=rhel-8.6-appstream
+baseurl=https://rhsm-pulp.corp.redhat.com/content/e4s/rhel8/8.6/$basearch/appstream/os/
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+
+[rhel-8.6-fast-datapath]
+name=rhel-8.6-fast-datapath
+baseurl=https://rhsm-pulp.corp.redhat.com/content/dist/layered/rhel8/$basearch/fast-datapath/os/
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+
+[rhel-8.6-server-ose-4.13]
+name=rhel-8.6-server-ose-4.13
+baseurl=https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/4.13/stream/el8/latest/$basearch/os
+enabled=1
+# ART RPMs are not signed before GA
+gpgcheck=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+
+[rhel-8.6-server-ose-4.12]
+name=rhel-8.6-server-ose-4.12
+baseurl=https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/4.12/stream/el8/latest/$basearch/os
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+
+[rhel-8.6-server-ose-4.11]
+name=rhel-8.6-server-ose-4.11
+baseurl=https://ocp-artifacts.engineering.redhat.com/pub/RHOCP/plashets/4.11/stream/el8/latest/$basearch/os
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
